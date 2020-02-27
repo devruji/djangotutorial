@@ -1,0 +1,7 @@
+[client]
+host = localhost
+port = 3306
+user = root
+password = ''
+database = django_tutorial
+default-character-set = utf8
