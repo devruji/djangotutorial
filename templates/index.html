@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block content %}
+<h2 align="center">เขียนบทความ</h2>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">รหัสบทความ</th>
+      <th scope="col">บทความ</th>
+      <th scope="col">รายละเอียด</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for d in posts %}
+    <tr>
+      <th scope="row">{{ d.id }}</th>
+      <td>{{ d.name }}</td>
+      <td>{{ d.desc }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %} {% block title %} Index {% endblock %}

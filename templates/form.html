@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block content %}
+<h2 align="center">Register Form</h2>
+<form action="form" method="POST">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="">Username</label>
+    <input type="text" class="form-control" name="username" />
+  </div>
+  <div class="form-group">
+    <label for="">Firstname</label>
+    <input type="text" class="form-control" name="firstname" />
+  </div>
+  <div class="form-group">
+    <label for="">Lastname</label>
+    <input type="text" class="form-control" name="lastname" />
+  </div>
+  <div class="form-group">
+    <label for="">Email</label>
+    <input type="email" class="form-control" name="email" />
+  </div>
+  <div class="form-group">
+    <label for="">Password</label>
+    <input type="password" class="form-control" name="password" />
+  </div>
+  <div class="form-group">
+    <label for="">Confirm Password</label>
+    <input type="password" class="form-control" name="cfpassword" />
+  </div>
+  <input type="submit" value="บันทึกข้อความ" class="btn btn-primary" />
+</form>
+{% endblock %} {% block title %} Index {% endblock %}
