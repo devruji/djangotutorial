@@ -5,7 +5,7 @@
 ### Django ###
 *.log
 *.pot
-*.pyc
+*.py[cod]
 __pycache__/
 local_settings.py
 db.sqlite3
@@ -167,6 +167,7 @@ dmypy.json
 # Pyre type checker
 
 ### VisualStudioCode ###
+.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
