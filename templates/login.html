@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block content %}
+<h2 align="center">Login Page</h2>
+{% if messages %} {% for ms in messages %}
+<div class="alert alert-info" role="alert">
+  <b>{{ ms }}</b>
+</div>
+<br />
+{% endfor %} {% endif %}
+<form action="login" method="POST">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="">Username</label>
+    <input type="text" class="form-control" name="username" />
+  </div>
+  <div class="form-group">
+    <label for="">Password</label>
+    <input type="password" class="form-control" name="password" />
+  </div>
+  <input type="submit" value="Login" class="btn btn-primary" />
+</form>
+{% endblock %} {% block title %} Login {% endblock %}

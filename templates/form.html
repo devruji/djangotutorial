@@ -1,5 +1,11 @@
 {% extends 'base.html' %} {% block content %}
 <h2 align="center">Register Form</h2>
+{% if messages %} {% for ms in messages %}
+<div class="alert alert-info" role="alert">
+  <b>{{ ms }}</b>
+</div>
+<br />
+{% endfor %} {% endif %}
 <form action="form" method="POST">
   {% csrf_token %}
   <div class="form-group">
@@ -28,4 +34,4 @@
   </div>
   <input type="submit" value="บันทึกข้อความ" class="btn btn-primary" />
 </form>
-{% endblock %} {% block title %} Index {% endblock %}
+{% endblock %} {% block title %} Form {% endblock %}
